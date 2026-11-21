@@ -21,4 +21,18 @@ entity Acumulador is
            data_out : out STD_LOGIC_VECTOR (3 downto 0));
 end Acumulador;
 
-calabacin calaza, cada quien para su casa
+architecture Behavioral of Acumulador is
+signal acc : STD_LOGIC_VECTOR (3 downto 0) := (others => '0');
+begin
+process(clk, reset)
+    begin
+        if reset = '1' then
+            acc <= (others => '0');
+        elsif rising_edge(clk) then
+            if enable = '1' then
+                acc <= std_logic_vector(unsigned(acc) + unsigned(data_in));
+            end if;
+        end if;
+    end process;
+    data_out <= acc;
+    
