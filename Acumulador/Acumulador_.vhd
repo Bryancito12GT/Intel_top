@@ -21,4 +21,4 @@ entity Acumulador is
            data_out : out STD_LOGIC_VECTOR (3 downto 0));
 end Acumulador;
 
-hola
+Pepe
