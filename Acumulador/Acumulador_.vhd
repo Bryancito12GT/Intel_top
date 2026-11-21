@@ -20,3 +20,5 @@ entity Acumulador is
            data_in : in STD_LOGIC_VECTOR (3 downto 0);
            data_out : out STD_LOGIC_VECTOR (3 downto 0));
 end Acumulador;
+
+calabacin calaza, cada quien para su casa
